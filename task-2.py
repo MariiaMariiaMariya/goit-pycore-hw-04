@@ -1,4 +1,5 @@
-path = "/Users/Mariia/Documents/Developer/repositories/goit-pycore-hw-04/cats.txt"
+# path = "/Users/Mariia/Documents/Developer/repositories/goit-pycore-hw-04/cats.txt"
+path = "cats.txt"
 
 def get_cats_info(path):
     animals = []

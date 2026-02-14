@@ -1,4 +1,5 @@
-path = "/Users/Mariia/Documents/Developer/repositories/goit-pycore-hw-04/salerys.txt"
+# path = "/Users/Mariia/Documents/Developer/repositories/goit-pycore-hw-04/salerys.txt"
+path = "salerys.txt"
 
 def total_salary(path):
     total = 0

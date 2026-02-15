@@ -6,13 +6,16 @@ init(autoreset=True)
 path = Path(".")  
 
 def print_tree(directory: Path, indent: str = ""):
-    for item in directory.iterdir():
-        if item.is_dir():
-            print(indent + Fore.LIGHTBLUE_EX + f"📂 {item.name}")
-            print_tree(item, indent + "   ")
-        else:
-            print(indent + Fore.LIGHTGREEN_EX + f"📄 {item.name}")
-
+    try:
+        for item in directory.iterdir():
+            if item.is_dir():
+                print(indent + Fore.LIGHTBLUE_EX + f"📂 {item.name}")
+                print_tree(item, indent + "   ")
+            else:
+                print(indent + Fore.LIGHTGREEN_EX + f"📄 {item.name}")
+    except FileNotFoundError:
+        return "❌ Ошибка. Не удалось найти файл"
+    
 def main():
     if not path.exists():
         print(Fore.RED + "❌ Путь не существует")
